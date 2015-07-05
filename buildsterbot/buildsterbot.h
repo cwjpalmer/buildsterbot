@@ -54,7 +54,7 @@ class Buildsterbot {
     // create objects here, using classes defined above
     // eg's:
     // DigitalInput button;
-    // AnalogSensor pot;
+    // AnalogInput pot;
   private:
 };
 
