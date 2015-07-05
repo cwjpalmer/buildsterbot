@@ -18,14 +18,6 @@ class DigitalInput {
     int _stateThatMeansIsOn;
 };
 
-class AnalogInput {
-  public:
-    void setup(int pin);
-    int reading();
-  private:
-    int _pin;
-};
-
 class DigitalOutput {
   public:
     void setup(int pin);
@@ -36,6 +28,14 @@ class DigitalOutput {
   private:
     int _pin;
     int _stateIsOn;
+};
+
+class AnalogInput {
+  public:
+    void setup(int pin);
+    int reading();
+  private:
+    int _pin;
 };
 
 class AnalogOutput {
@@ -51,10 +51,9 @@ class AnalogOutput {
 class Buildsterbot {
   public:
     Buildsterbot();
-    // create objects here, using classes defined above
-    // eg's:
-    // DigitalInput button;
-    // AnalogInput pot;
+    // create objects here, using classes defined above:
+    DigitalOutput onBoardLED;
+
   private:
 };
 

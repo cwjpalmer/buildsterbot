@@ -7,10 +7,9 @@
 #include "Buildsterbot.h"
 
 Buildsterbot::Buildsterbot() {
-  // run setup functions here:
-  // eg.
-  // button.setup(10,LOW);
-  // pot.setup(A0);
+  // run setup functions here - remember to include arguments
+  onBoardLED.setup(13);
+
 }
 
 void DigitalInput::setup(int pin, bool stateThatMeansIsOn){
@@ -27,14 +26,6 @@ bool DigitalInput::isOn(){
 }
 bool DigitalInput::isOff(){
   return ! isOn();
-}
-
-void AnalogInput::setup(int pin) {
-  pinMode(pin,INPUT);
-  _pin = pin;
-}
-int AnalogInput::reading() {
-  return analogRead(_pin);
 }
 
 void DigitalOutput::setup(int pin) {
@@ -54,6 +45,14 @@ bool DigitalOutput::isOn() {
 }
 bool DigitalOutput::isOff() {
   return ! _stateIsOn;
+}
+
+void AnalogInput::setup(int pin) {
+  pinMode(pin,INPUT);
+  _pin = pin;
+}
+int AnalogInput::reading() {
+  return analogRead(_pin);
 }
 
 void AnalogOutput::setup(int pin) {
