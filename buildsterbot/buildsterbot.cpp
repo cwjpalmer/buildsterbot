@@ -8,6 +8,7 @@
 
 Buildsterbot::Buildsterbot() {
   // run setup functions here - remember to include arguments
+  // objectName.setup(inputsGoHere);
   onBoardLED.setup(13);
 
 }
