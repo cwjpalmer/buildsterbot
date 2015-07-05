@@ -1,2 +1,2 @@
-rm -r ~/Documents/Arduino/libraries/buildsterbot
-cp -rpv buildsterbot ~/Documents/Arduino/libraries/
+rm -r ~/Documents/Arduino/libraries/Buildsterbot
+cp -rpv Buildsterbot ~/Documents/Arduino/libraries/
