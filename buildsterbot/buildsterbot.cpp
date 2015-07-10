@@ -6,13 +6,6 @@
 #include "Arduino.h"
 #include "Buildsterbot.h"
 
-Buildsterbot::Buildsterbot() {
-  // run setup functions here - remember to include arguments
-  // objectName.setup(inputsGoHere);
-  onBoardLED.setup(13);
-
-}
-
 void DigitalInput::setup(int pin, bool stateThatMeansIsOn){
   pinMode(pin, INPUT);
   _pin = pin;

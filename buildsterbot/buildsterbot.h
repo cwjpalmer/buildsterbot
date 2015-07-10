@@ -48,14 +48,4 @@ class AnalogOutput {
     int _currentSetting;
 };
 
-class Buildsterbot {
-  public:
-    Buildsterbot();
-    // create objects here, using classes defined above:
-    // ClassName objectName;
-    DigitalOutput onBoardLED;
-
-  private:
-};
-
 #endif
