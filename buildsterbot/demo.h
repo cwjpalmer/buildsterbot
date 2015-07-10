@@ -12,7 +12,8 @@
 class Demo {
   public:
     Demo();
-    // DigitalOutput redLED;
+    // create objects here
+    
   private:
 };
 

@@ -8,5 +8,6 @@
 #include "Demo.h"
 
 Demo::Demo() {
-  // redLED.setup(10);
+  // call setup funcitons here
+
 }
