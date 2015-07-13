@@ -46,7 +46,15 @@ void AnalogInput::setup(int pin) {
   _pin = pin;
 }
 int AnalogInput::reading() {
-  return analogRead(_pin);
+  int value = 0;
+  // take 5 readings
+  for (int i; i < 5; i++) {
+    value += analogRead(_pin);
+  }
+  // average readings
+  value = value / 5;
+  // return average reading
+  return value;
 }
 
 void AnalogOutput::setup(int pin) {
