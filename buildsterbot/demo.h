@@ -1,6 +1,6 @@
 /*
   buildsterbot library
-  copyright Christopher Walter James Palmer 2015
+  copyright Christopher Walter James Palmer 2015, all rights reserved
 */
 
 #ifndef demo_h
@@ -13,7 +13,7 @@ class Demo {
   public:
     Demo();
     // create objects here
-    
+
   private:
 };
 
