@@ -5,6 +5,8 @@
 
 #include "Arduino.h"
 #include "Buildsterbot.h"
+#include <Servo.h>
+
 
 void DigitalInput::setup(int pin, bool stateThatMeansIsOn){
   pinMode(pin, INPUT);
@@ -46,16 +48,17 @@ void AnalogInput::setup(int pin) {
   _pin = pin;
 }
 int AnalogInput::reading() {
-  int value = 0;
-  // take 5 readings
-  for (int i; i < 5; i++) {
-    value += analogRead(_pin);
-    delay(2);
-  }
-  // average readings
-  value = value / 5;
-  // return average reading
-  return value;
+  // _value = 0;
+  // // take 5 readings
+  // for (int i; i < 5; i++) {
+  //   _value = _value + analogRead(_pin);
+  //   delay(2);
+  // }
+  // _value = (float)l_value / (float)l5; // THIS IS THE PROBLEM
+  // // return average reading
+  // return _value;
+    // return analogRead(_pin);
+    return analogRead(_pin);
 }
 
 void AnalogOutput::setup(int pin) {
@@ -68,4 +71,21 @@ void AnalogOutput::set(int newSetting) {
 }
 int AnalogOutput::setting() {
   return _currentSetting;
+}
+
+void SERVO::setup(int pin) {
+  _pin = pin;
+  _servo.attach(_pin);
+  setPosition(0);
+}
+void SERVO::setPosition(int position){
+  if ( position > 180 ) {
+    _positionSetting = 180;
+  } else {
+    _positionSetting = position;
+  }
+  _servo.write(_positionSetting);
+}
+int SERVO::currentPosition(){
+  return _positionSetting;
 }

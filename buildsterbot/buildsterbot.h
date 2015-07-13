@@ -7,6 +7,7 @@
 #define buildsterbot_h
 
 #include "Arduino.h"
+#include <Servo.h>
 
 class DigitalInput {
   public:
@@ -36,6 +37,7 @@ class AnalogInput {
     int reading();
   private:
     int _pin;
+    int _value;
 };
 
 class AnalogOutput {
@@ -46,6 +48,17 @@ class AnalogOutput {
   private:
     int _pin;
     int _currentSetting;
+};
+
+class SERVO {
+  public:
+    void setup(int pin);
+    void setPosition(int position);
+    int currentPosition();
+  private:
+    int _positionSetting;
+    int _pin;
+    Servo _servo;
 };
 
 #endif
