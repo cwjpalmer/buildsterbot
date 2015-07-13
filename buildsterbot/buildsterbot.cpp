@@ -50,6 +50,7 @@ int AnalogInput::reading() {
   // take 5 readings
   for (int i; i < 5; i++) {
     value += analogRead(_pin);
+    delay(2);
   }
   // average readings
   value = value / 5;
