@@ -7,7 +7,9 @@
 #include "Buildsterbot.h"
 #include <Servo.h>
 
-
+DigitalInput::DigitalInput() {
+  
+}
 void DigitalInput::setup(int pin, bool stateThatMeansIsOn){
   pinMode(pin, INPUT);
   _pin = pin;

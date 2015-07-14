@@ -11,6 +11,7 @@
 
 class DigitalInput {
   public:
+    DigitalInput();
     void setup(int pin, bool stateThatMeansIsOn);
     bool isOn();
     bool isOff();
