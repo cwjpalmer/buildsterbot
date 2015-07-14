@@ -8,7 +8,7 @@
 #include <Servo.h>
 
 DigitalInput::DigitalInput(int pin, bool stateThatMeansIsOn) {
-
+  setup(pin, stateThatMeansIsOn);
 }
 void DigitalInput::setup(int pin, bool stateThatMeansIsOn){
   pinMode(pin, INPUT);
